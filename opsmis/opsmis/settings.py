@@ -174,7 +174,7 @@ SIMPLEUI_CONFIG = {
     # 在自定义菜单的基础上保留系统模块
     'system_keep': True,
     #菜单排序和过滤
-    'menu_display': ['信息管理', '报表管理', '值班管理', '操作间实况', '权限认证'],
+    'menu_display': ['信息管理', '报表管理', '工作台', '操作间实况', '值班管理', '权限认证'],
     'menus': [{
         'app': 'auth',
         'name': '权限认证',
@@ -222,23 +222,39 @@ SIMPLEUI_CONFIG = {
         }]
     }, {
         'name': '操作间实况',
-        'icon': 'fas fa-calendar-alt',
+        'icon': 'fas fa-eye',
         'models': [{
             'name': '操作间进出实况',
-            'url': '/operaduty',
-            'icon': 'far fa-calendar-alt'
+            'url': '/turnoverlive',
+            'icon': 'fas fa-walking'
         }, {
             'name': '操作环境实况',
-            'url': '/opsduty',
-            'icon': 'far fa-calendar-alt'
+            'url': '/systemlive',
+            'icon': 'fas fa-laptop'
         }, {
             'name': '操作行为实况',
-            'url': '/opsduty',
-            'icon': 'far fa-calendar-alt'
+            'url': '/commandlive',
+            'icon': 'fas fa-laptop-code'
         }, {
             'name': '批量调度实况',
-            'url': '/opsduty',
-            'icon': 'far fa-calendar-alt'
+            'url': '/batchrunlive',
+            'icon': 'fas fa-chart-pie'
+        }]
+    }, {
+        'name': '工作台',
+        'icon': 'fas fa-desktop',
+        'models': [{
+            'name': '操作日志',
+            'url': '/operlog',
+            'icon': 'fas fa-edit'
+        }, {
+            'name': 'D+',
+            'url': '/importdplus',
+            'icon': 'fas fa-edit'
+        }, {
+            'name': 'Murex',
+            'url': '/importmurex',
+            'icon': 'fas fa-edit'
         }]
     }]
 }

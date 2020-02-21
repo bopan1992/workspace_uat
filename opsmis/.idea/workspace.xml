@@ -59,7 +59,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/opsapp/report" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/opsapp/opslive" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -69,11 +69,11 @@
       <recent name="C:\workspace\workspace_dev\opsmis\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\report" />
+      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\opslive" />
       <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\work" />
+      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\report" />
       <recent name="C:\workspace\workspace_dev\opsmis\opsapp\migrations" />
       <recent name="C:\workspace\workspace_dev\opsmis\static\echarts" />
-      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\duty" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,7 +132,8 @@
       <workItem from="1580983081733" duration="37590000" />
       <workItem from="1581992501305" duration="27003000" />
       <workItem from="1582176121898" duration="33623000" />
-      <workItem from="1582215322462" duration="9692000" />
+      <workItem from="1582215322462" duration="25968000" />
+      <workItem from="1582295260498" duration="33000" />
     </task>
     <servers />
   </component>
@@ -164,10 +165,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="543" height="446" key="SwitcherDM/0.0.1280.760@0.0.1280.760" timestamp="1582218516299" />
-    <state x="352" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1582215323001">
+    <state x="352" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1582295263355">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="352" y="209" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1582215323001" />
+    <state x="352" y="209" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1582295263355" />
     <state x="304" y="83" width="672" height="678" key="search.everywhere.popup" timestamp="1582205930493">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

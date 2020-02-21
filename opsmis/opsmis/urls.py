@@ -33,4 +33,9 @@ urlpatterns = [
     path('opsduty/', views.opsduty),  # opsduty
     path('importdplus/', views.importdplus),  # work
     path('importmurex/', views.importmurex),  # work
+    path('operlog/', views.operlog),
+    path('turnoverlive/', views.turnoverlive),
+    path('systemlive/', views.systemlive),
+    path('commandlive/', views.commandlive),
+    path('batchrunlive/', views.batchrunlive),
 ]

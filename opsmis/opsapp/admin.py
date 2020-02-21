@@ -16,24 +16,24 @@ class BatchInfoAdmin(admin.ModelAdmin):
                     'error_msg','error_user')
     #ordering设置默认排序字段，负号表示降序排序
     list_per_page = 10
-    #自定义Action
-    def import_dplus(self, request, queryset):
-        pass
-    import_dplus.short_description = ' D+'
-    import_dplus.icon = 'fas fa-edit'
-    import_dplus.style = 'color:black;'
-    import_dplus.type = 'info'
-    import_dplus.action_type = 1 #0=当前页内打开，1=新tab打开，2=浏览器tab打开
-    import_dplus.action_url = '../importdplus'
-    def import_murex(self, request, queryset):
-        pass
-    import_murex.short_description = ' Murex'
-    import_murex.icon = 'fas fa-edit'
-    import_murex.style = 'color:black;'
-    import_murex.type = 'info'
-    import_murex.action_type = 1 #0=当前页内打开，1=新tab打开，2=浏览器tab打开
-    import_murex.action_url = '../importmurex'
-    actions = ['import_dplus','import_murex']
+    # #自定义Action
+    # def import_dplus(self, request, queryset):
+    #     pass
+    # import_dplus.short_description = ' D+'
+    # import_dplus.icon = 'fas fa-edit'
+    # import_dplus.style = 'color:black;'
+    # import_dplus.type = 'info'
+    # import_dplus.action_type = 1 #0=当前页内打开，1=新tab打开，2=浏览器tab打开
+    # import_dplus.action_url = '../importdplus'
+    # def import_murex(self, request, queryset):
+    #     pass
+    # import_murex.short_description = ' Murex'
+    # import_murex.icon = 'fas fa-edit'
+    # import_murex.style = 'color:black;'
+    # import_murex.type = 'info'
+    # import_murex.action_type = 1 #0=当前页内打开，1=新tab打开，2=浏览器tab打开
+    # import_murex.action_url = '../importmurex'
+    # actions = ['import_dplus','import_murex']
     #Action权限管理
     # import_dplusallowed_permissions = ('change',)
 

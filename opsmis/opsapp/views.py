@@ -4,11 +4,26 @@ from django.shortcuts import render
 # from django.http import HttpResponse
 # def hello(request):
 #     return HttpResponse('hello，欢迎使用Django！By bopan')
+def turnoverlive(request):
+    return render(request, 'opsapp/opslive/turnoverlive.html')
+
+def systemlive(request):
+    return render(request, 'opsapp/opslive/systemlive.html')
+
+def commandlive(request):
+    return render(request, 'opsapp/opslive/commandlive.html')
+
+def batchrunlive(request):
+    return render(request, 'opsapp/opslive/batchrunlive.html')
+
 def importdplus(request):
     return render(request, 'opsapp/work/importdplus.html')
 
 def importmurex(request):
     return render(request, 'opsapp/work/importmurex.html')
+
+def operlog(request):
+    return render(request, 'opsapp/work/operlog.html')
 
 def dplusreport(request):
     return render(request, 'opsapp/report/dplusreport.html')
