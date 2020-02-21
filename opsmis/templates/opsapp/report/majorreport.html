@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- 引入 ECharts 文件 -->
+    <link rel="stylesheet" href="../../static/layui/css/layui.css">
+    <script src="../../../static/echarts/echarts.min.js"></script>
+    <style>
+        .layui-form-label {
+            padding: 5px 15px;
+        }
+        .layui-input, .layui-select, .layui-textarea {
+            height: 25px;
+            line-height: 25px\9;
+        }
+        .layui-form-select dl dd, .layui-form-select dl dt {
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layui-collapse">
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title"><i class="layui-icon layui-icon-table"></i> 重要报表执行情况</h2>
+            <div class="layui-colla-content layui-show">
+                <table class="layui-table" lay-size="sm" style="text-align: center">
+                    <thead>
+                        <tr>
+                            <th width="50" style="text-align: center">序号</th>
+                            <th width="160" style="text-align: center">报表名称</th>
+                            <th width="100" style="text-align: center">实际开始时间</th>
+                            <th width="100" style="text-align: center">实际结束时间</th>
+                            <th width="120" style="text-align: center">耗时</th>
+                            <th width="120" style="text-align: center">参考耗时(基准值)</th>
+                            <th width="120" style="text-align: center">耗时异常值(平时)</th>
+                            <th width="120" style="text-align: center">耗时异常值(月初、月末)</th>
+                            <th width="120" style="text-align: center">批量处理情况</th>
+                        </tr>
+                    </thead>
+                  <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>资产负债报表</td>
+                        <td>00:00</td>
+                        <td>00:59</td>
+                        <td>0时59分</td>
+                        <td>1小时</td>
+                        <td>1小时30分</td>
+                        <td>2小时30分</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>银行卡境外交易信息</td>
+                        <td>00:00</td>
+                        <td>00:59</td>
+                        <td>0时59分</td>
+                        <td>1小时</td>
+                        <td>1小时30分</td>
+                        <td>2小时30分</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>金融机构日报统计制度</td>
+                        <td>00:00</td>
+                        <td>00:59</td>
+                        <td>0时59分</td>
+                        <td>1小时</td>
+                        <td>1小时30分</td>
+                        <td>2小时30分</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>OBS报表</td>
+                        <td>00:00</td>
+                        <td>00:59</td>
+                        <td>0时59分</td>
+                        <td>1小时</td>
+                        <td>1小时30分</td>
+                        <td>2小时30分</td>
+                        <td>正常</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="layui-collapse">
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title"><i class="layui-icon layui-icon-chart"></i> 重要报表耗时趋势图</h2>
+            <div class="layui-colla-content layui-show">
+                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main" style="width: 1000px;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'D+核心系统批量'
+            },
+            tooltip: {},
+            legend: {
+                data:['分钟']
+            },
+            xAxis: {
+                data: ["日前批量","核心换日","异步检查","批量处理","机构撤并","批后处理", "存款批量数据清理","会计批量","SP001表清理会计"],
+
+                axisLabel:{interval: 0}
+            },
+            yAxis: {},
+            series: [{
+                name: '分钟',
+                type: 'bar',
+                data: [13, 1, 1, 30, 1, 5, 54, 13, 8]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    <script src="../../static/layui/layui.js"></script>
+    <script>
+    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    </script>
+</body>
+</html>

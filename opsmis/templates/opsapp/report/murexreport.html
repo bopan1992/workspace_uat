@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- 引入 ECharts 文件 -->
+    <link rel="stylesheet" href="../../static/layui/css/layui.css">
+    <script src="../../../static/echarts/echarts.min.js"></script>
+    <style>
+        .layui-form-label {
+            padding: 5px 15px;
+        }
+        .layui-input, .layui-select, .layui-textarea {
+            height: 25px;
+            line-height: 25px\9;
+        }
+        .layui-form-select dl dd, .layui-form-select dl dt {
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layui-collapse">
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title"><i class="layui-icon layui-icon-table"></i> Murex系统批量详述</h2>
+            <div class="layui-colla-content layui-show">
+                <table class="layui-table" lay-size="sm" style="text-align: center">
+                    <thead>
+                        <tr>
+                            <th width="60" style="text-align: center">批量日期</th>
+                            <th width="180" style="text-align: center">2020-02-20</th>
+                            <th width="100" style="text-align: center">登记人</th>
+                            <th width="120" style="text-align: center" colspan="2">潘博、马文龙</th>
+                            <th width="200" style="text-align: center" colspan="4">备注</th>
+                        </tr>
+                        <tr>
+                            <th width="50" style="text-align: center">序号</th>
+                            <th width="280" style="text-align: center" colspan="2">执行项目</th>
+                            <th width="100" style="text-align: center">开始时间</th>
+                            <th width="100" style="text-align: center">结束时间</th>
+                            <th width="80" style="text-align: center">小计(分钟)</th>
+                            <th width="120" style="text-align: center">异常情况</th>
+                            <th width="120" style="text-align: center">处理人</th>
+                            <th width="120" style="text-align: center">异常截图</th>
+                        </tr>
+                    </thead>
+                  <tbody>
+                    <tr>
+                        <td>一</td>
+                        <td colspan='7'>批前准备如下</td>
+                        <td rowspan='20'>
+                            <div class="layui-upload-list" id="photo_list"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td colspan="2">批前备份</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>二</td>
+                        <td colspan='7'>关键路径步骤如下</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ATUO_SEC_FIXING_0001</td>
+                        <td>债券定盘</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    <tr>
+                        <td>2</td>
+                        <td>AUTO_FIXING_0002</td>
+                        <td>交易定盘</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>ACC_LIQMAINT_0021</td>
+                        <td>头寸计算</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                   <tr>
+                        <td>4</td>
+                        <td>ACC_EOD_TRADE_0020</td>
+                        <td>生成会计分录</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>DM_BF_12B_PS_0084</td>
+                        <td rowspan="4">生成报表(这四步跑完标记Murex会计批量完成，可以开始生成账务)</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>DM_BF_10A_AC_0079</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>DM_AD_01A_INIT_0086</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                   <tr>
+                        <td>8</td>
+                        <td>DM_AD_02_WORKDAY_0055</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>ERM_MLC_LIMITS_PURGE_0047</td>
+                        <td>限额清理</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>WAIT_BANK_DATA_0106</td>
+                        <td>等待银行账户敞口数据</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>ERM_MRL_VAR_REPORT_0052</td>
+                        <td>VAR报表</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>统计</td>
+                        <td colspan="2">关键路径总耗时</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>三</td>
+                        <td colspan='7'>生成账务步骤如下</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td colspan="2">生成账务</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    <tr>
+                        <td>2</td>
+                        <td colspan="2">记账</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="2">关账</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td>无</td>
+                        <td>无</td>
+                    </tr>
+                    <tr>
+                        <td>统计</td>
+                        <td colspan="2">生成账务总耗时</td>
+                        <td>19:30</td>
+                        <td>20:53</td>
+                        <td>83</td>
+                        <td colspan="2"></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="layui-collapse">
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title"><i class="layui-icon layui-icon-chart"></i> Murex系统批量耗时趋势图</h2>
+            <div class="layui-colla-content layui-show">
+                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main" style="width: 1000px;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'D+核心系统批量'
+            },
+            tooltip: {},
+            legend: {
+                data:['分钟']
+            },
+            xAxis: {
+                data: ["日前批量","核心换日","异步检查","批量处理","机构撤并","批后处理", "存款批量数据清理","会计批量","SP001表清理会计"],
+
+                axisLabel:{interval: 0}
+            },
+            yAxis: {},
+            series: [{
+                name: '分钟',
+                type: 'bar',
+                data: [13, 1, 1, 30, 1, 5, 54, 13, 8]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    <script src="../../static/layui/layui.js"></script>
+    <script>
+    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    </script>
+</body>
+</html>
