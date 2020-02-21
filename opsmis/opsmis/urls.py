@@ -24,9 +24,13 @@ urlpatterns = [
     path('', views.index),   # 里面留空，代表首页
     path('ueditor/', include('DjangoUeditor.urls')), #添加DjangoUeditor的URL
     re_path('^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),#增加此行
-    path('reportdplus/', views.reportdplus),  # reportdplus
-    path('reportmurex/', views.reportmurex),  # reportmurex
+    path('dplusreport/', views.dplusreport),  # dplusreport
+    path('murexreport/', views.murexreport),  # murexreport
+    path('majortask/', views.majortask),  # dplusreport
+    path('majorreport/', views.majorreport),  # murexreport
     path('reportdemo/', views.reportdemo),  # reportdemo
     path('operaduty/', views.operaduty),  # operaduty
     path('opsduty/', views.opsduty),  # opsduty
+    path('importdplus/', views.importdplus),  # work
+    path('importmurex/', views.importmurex),  # work
 ]

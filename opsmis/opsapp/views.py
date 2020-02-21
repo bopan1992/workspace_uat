@@ -4,12 +4,23 @@ from django.shortcuts import render
 # from django.http import HttpResponse
 # def hello(request):
 #     return HttpResponse('hello，欢迎使用Django！By bopan')
+def importdplus(request):
+    return render(request, 'opsapp/work/importdplus.html')
 
-def reportdplus(request):
-    return render(request, 'opsapp/report/reportdplus.html')
+def importmurex(request):
+    return render(request, 'opsapp/work/importmurex.html')
 
-def reportmurex(request):
-    return render(request, 'opsapp/report/reportmurex.html')
+def dplusreport(request):
+    return render(request, 'opsapp/report/dplusreport.html')
+
+def murexreport(request):
+    return render(request, 'opsapp/report/murexreport.html')
+
+def majortask(request):
+    return render(request, 'opsapp/report/majortask.html')
+
+def majorreport(request):
+    return render(request, 'opsapp/report/majorreport.html')
 
 def reportdemo(request):
     return render(request, 'opsapp/report/reportdemo.html')

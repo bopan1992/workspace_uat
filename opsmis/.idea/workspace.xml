@@ -44,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -58,21 +59,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/echarts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/opsapp/report" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\workspace_dev\opsmis\static\echarts" />
-      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\report" />
-      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\duty" />
-      <recent name="C:\workspace\workspace_dev\opsmis\media" />
-      <recent name="C:\workspace\workspace_dev\opsmis\opsmisvenv\Lib\site-packages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\report" />
       <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp" />
       <recent name="C:\workspace\workspace_dev\opsmis\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\report" />
+      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\work" />
+      <recent name="C:\workspace\workspace_dev\opsmis\opsapp\migrations" />
+      <recent name="C:\workspace\workspace_dev\opsmis\static\echarts" />
+      <recent name="C:\workspace\workspace_dev\opsmis\templates\opsapp\duty" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +130,9 @@
       <workItem from="1580836811922" duration="30465000" />
       <workItem from="1580923947314" duration="2192000" />
       <workItem from="1580983081733" duration="37590000" />
-      <workItem from="1581992501305" duration="8465000" />
+      <workItem from="1581992501305" duration="27003000" />
+      <workItem from="1582176121898" duration="33623000" />
+      <workItem from="1582215322462" duration="9692000" />
     </task>
     <servers />
   </component>
@@ -157,17 +160,17 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="144" y="26" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1580830789149" />
-    <state width="543" height="446" key="SwitcherDM" timestamp="1580920131156">
+    <state width="543" height="446" key="SwitcherDM" timestamp="1582218516299">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="543" height="446" key="SwitcherDM/0.0.1280.760@0.0.1280.760" timestamp="1580920131156" />
-    <state x="352" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1581992501972">
+    <state width="543" height="446" key="SwitcherDM/0.0.1280.760@0.0.1280.760" timestamp="1582218516299" />
+    <state x="352" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1582215323001">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="352" y="209" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1581992501972" />
-    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup" timestamp="1581077875151">
+    <state x="352" y="209" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1582215323001" />
+    <state x="304" y="83" width="672" height="678" key="search.everywhere.popup" timestamp="1582205930493">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1581077875151" />
+    <state x="304" y="83" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1582205930493" />
   </component>
 </project>

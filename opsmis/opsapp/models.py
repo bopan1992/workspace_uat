@@ -22,6 +22,8 @@ class BatchInfo(models.Model):
     end_time = models.DateTimeField('结束时间')
     error_msg = models.CharField('异常情况', max_length=50, default='')
     error_user = models.CharField('异常处理人', max_length=20, default='')
+    first_time = models.DateTimeField('登记时间', auto_now_add=True)
+    last_time = models.DateTimeField('更新时间', auto_now=True)
 
     class Meta:
         verbose_name = '作业信息'

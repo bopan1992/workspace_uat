@@ -174,7 +174,7 @@ SIMPLEUI_CONFIG = {
     # 在自定义菜单的基础上保留系统模块
     'system_keep': True,
     #菜单排序和过滤
-    'menu_display': ['信息管理', '报表管理', '值班管理', '权限认证'],
+    'menu_display': ['信息管理', '报表管理', '值班管理', '操作间实况', '权限认证'],
     'menus': [{
         'app': 'auth',
         'name': '权限认证',
@@ -186,14 +186,22 @@ SIMPLEUI_CONFIG = {
         }]
     },  {
         'name': '报表管理',
-        'icon': 'fas fa-chart-line',
+        'icon': 'fas fa-chart-area',
         'models': [{
-            'name': 'D+报表',
-            'url': '/reportdplus',
-            'icon': 'far fa-chart-bar'
+            'name': 'D+批量',
+            'url': '/dplusreport',
+            'icon': 'fas fa-chart-area'
         }, {
-            'name': 'Murex报表',
-            'url': '/reportmurex',
+            'name': 'Murex批量',
+            'url': '/murexreport',
+            'icon': 'fas fa-chart-area'
+        }, {
+            'name': '关键批量',
+            'url': '/majortask',
+            'icon': 'fas fa-chart-area'
+        }, {
+            'name': '重要报表',
+            'url': '/majorreport',
             'icon': 'fas fa-chart-area'
         }, {
             'name': '报表示例',
@@ -209,6 +217,26 @@ SIMPLEUI_CONFIG = {
             'icon': 'far fa-calendar-alt'
         }, {
             'name': '运营值班',
+            'url': '/opsduty',
+            'icon': 'far fa-calendar-alt'
+        }]
+    }, {
+        'name': '操作间实况',
+        'icon': 'fas fa-calendar-alt',
+        'models': [{
+            'name': '操作间进出实况',
+            'url': '/operaduty',
+            'icon': 'far fa-calendar-alt'
+        }, {
+            'name': '操作环境实况',
+            'url': '/opsduty',
+            'icon': 'far fa-calendar-alt'
+        }, {
+            'name': '操作行为实况',
+            'url': '/opsduty',
+            'icon': 'far fa-calendar-alt'
+        }, {
+            'name': '批量调度实况',
             'url': '/opsduty',
             'icon': 'far fa-calendar-alt'
         }]

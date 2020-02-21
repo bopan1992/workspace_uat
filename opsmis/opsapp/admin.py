@@ -1,19 +1,42 @@
 from django.contrib import admin
-from django.db import models
-from django.utils.html import format_html
+
+from django.http import HttpResponseRedirect
+
 from opsapp.models import JobInfo, BatchInfo
 
 admin.site.site_header = '操作管理系统'
 admin.site.site_title = '平安银行科技运营中心操作管理系统'
 
- #导入需要管理的数据库表
+#导入需要管理的数据库表
 #批量信息
 @admin.register(BatchInfo)
 class BatchInfoAdmin(admin.ModelAdmin):
     # listdisplay设置要显示在列表中的字段（id字段是Django模型的默认主键）
-    list_display = ('task_date','sys_name', 'sys_desc', 'task_name', 'task_desc', 'begin_time', 'end_time',
+    list_display = ('task_date','sys_name', 'task_name', 'begin_time', 'end_time',
                     'error_msg','error_user')
     #ordering设置默认排序字段，负号表示降序排序
+    list_per_page = 10
+    #自定义Action
+    def import_dplus(self, request, queryset):
+        pass
+    import_dplus.short_description = ' D+'
+    import_dplus.icon = 'fas fa-edit'
+    import_dplus.style = 'color:black;'
+    import_dplus.type = 'info'
+    import_dplus.action_type = 1 #0=当前页内打开，1=新tab打开，2=浏览器tab打开
+    import_dplus.action_url = '../importdplus'
+    def import_murex(self, request, queryset):
+        pass
+    import_murex.short_description = ' Murex'
+    import_murex.icon = 'fas fa-edit'
+    import_murex.style = 'color:black;'
+    import_murex.type = 'info'
+    import_murex.action_type = 1 #0=当前页内打开，1=新tab打开，2=浏览器tab打开
+    import_murex.action_url = '../importmurex'
+    actions = ['import_dplus','import_murex']
+    #Action权限管理
+    # import_dplusallowed_permissions = ('change',)
+
     ordering = ('-task_date',)
     search_fields = ('sys_name',)  # 搜索字段
 
